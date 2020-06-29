@@ -1,0 +1,6 @@
+janitor.flag\_nulls
+===================
+
+.. currentmodule:: janitor
+
+.. autofunction:: flag_nulls
