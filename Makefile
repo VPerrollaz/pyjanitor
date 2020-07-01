@@ -12,7 +12,7 @@ release:
 #
 # ALSO, remove this comment once it's tested!!!!!!!!!!!
 
-.PHONY: format test lint docs isort check style notebooks install
+.PHONY: format test lint docs isort check style notebooks install type
 
 format:
 	@echo "Applying Black Python code formatting..."
@@ -39,6 +39,10 @@ check: test docs notebooks isort format lint
 
 style: isort format
 	@echo "styling complete"
+
+typecheck:
+	@echo "Running mypy"
+	mypy
 
 install:
 	@echo "Creating Conda environment..."
